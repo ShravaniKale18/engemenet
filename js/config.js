@@ -83,9 +83,9 @@ var INVITATION_CONFIG = {
           name: "संतोष",
           displayName: "चि. संतोष",
           initial: "सं",
-          father: "श्री. राजेश बंडगर",
-          mother: "सौ. सुनिता बंडगर",
-          parentageHTML: "सुपुत्र: <span>सौ. सुनिता व श्री. राजेश बंडगर</span>"
+          father: "श्री.  बंडगर",
+          mother: "सौ.  बंडगर",
+          parentageHTML: "सुपुत्र: <span>सौ.  व श्री.  बंडगर</span>"
         },
         bride: {
           salutation: "चि.सौ.कां.",
