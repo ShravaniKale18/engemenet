@@ -146,7 +146,12 @@ function switchLanguage(lang) {
     setText("welcome-shloka", d.welcome.shloka);
     setText("welcome-subtext", d.welcome.subtext);
     setText("welcome-heading", d.welcome.heading);
-    setHTML("welcome-couple-preview", `${d.welcome.previewText}<br><strong class="names-highlight" id="welcome-couple-names">${escapeHtml(d.welcome.coupleHighlight)}</strong>`);
+    if (document.getElementById("welcome-invitation-text")) {
+      setText("welcome-invitation-text", d.welcome.previewText);
+      setText("welcome-couple-names", d.welcome.coupleHighlight);
+    } else {
+      setHTML("welcome-couple-preview", `${escapeHtml(d.welcome.previewText)}<br><strong class="names-highlight" id="welcome-couple-names">${escapeHtml(d.welcome.coupleHighlight)}</strong>`);
+    }
     setText("welcome-open-btn-text", d.welcome.openBtn);
     setHTML("welcome-audio-hint", `<i class="fa-solid fa-volume-high"></i> ${d.welcome.audioHint}`);
   }
@@ -713,7 +718,7 @@ function initActionButtons() {
     const details = encodeURIComponent(
       d ? d.cardHeader.announcement : "Auspicious Engagement Ceremony of Santosh and Rutuja"
     );
-    const location = encodeURIComponent("The Grand Rajwada Palace & Lawns, Udaipur, Rajasthan");
+    const location = encodeURIComponent("Vishnudas Mangal Karyalay, Navin Renapur Naka, Latur, Maharashtra");
     const dates = "20261130T130000Z/20261130T173000Z";
 
     const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
@@ -727,7 +732,7 @@ function initActionButtons() {
   if (copyAddressBtn) {
     copyAddressBtn.addEventListener("click", () => {
       const d = getCurrentLangData();
-      const addr = d ? `${d.details.venueCard.name}, ${d.details.venueCard.hall}, ${d.details.addressCard.line}, ${d.details.addressCard.city}` : "The Grand Rajwada Palace, Udaipur, Rajasthan - 313001";
+      const addr = d ? `${d.details.venueCard.name}, ${d.details.venueCard.hall}, ${d.details.addressCard.line}, ${d.details.addressCard.city}` : "विष्णुदास मंगल कार्यालय, नवीन रेणापूर नाका, लातूर";
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(addr).then(() => {
           showToast(d ? d.toasts.copiedAddress : "Address copied!");

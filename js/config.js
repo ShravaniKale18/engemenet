@@ -43,12 +43,12 @@ var INVITATION_CONFIG = {
   // Background Music
   music: {
     enabled: true,
-    audioSrc: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_c896e00b84.mp3?filename=flute-traditional-indian-111867.mp3",
-    title: "Traditional Shehnai & Flute Melodies"
+    audioSrc: "audio/man-dhaga-dhaga.mp3",
+    title: "मन धागा धागा जोडते नवा"
   },
 
   // Map & Location Link for Directions Button
-  googleMapsUrl: "https://maps.google.com/?q=The+Grand+Rajwada+Palace+Udaipur",
+  googleMapsUrl: "https://maps.google.com/?q=Vishnudas+Mangal+Karyalay+Navin+Renapur+Naka+Latur",
 
   // Multilingual Dictionaries
   languages: {
@@ -58,15 +58,15 @@ var INVITATION_CONFIG = {
     mr: {
       langCode: "mr",
       langName: "मराठी",
-      pageTitle: "शुभ साखरपुडा निमंत्रण पत्रिका | संतोष आणि ऋतुजा",
-      metaDesc: "श्रींच्या कृपेने व कुलदेवतेच्या आशीर्वादाने, संतोष आणि ऋतुजा यांच्या शुभ साखरपुडा सोहळ्याचे सस्नेह निमंत्रण.",
+      pageTitle: "शुभ साखरपुडा निमंत्रण पत्रिका | ऋतुजा आणि संतोष ",
+      metaDesc: "श्रींच्या कृपेने व कुलदेवतेच्या आशीर्वादाने, ऋतुजा आणि संतोष यांच्या शुभ साखरपुडा सोहळ्याचे सस्नेह निमंत्रण.",
 
       welcome: {
         shloka: "|| श्री गणेशाय नमः || || श्री कुलस्वामिनी प्रसन्न ||",
         subtext: "सस्नेह निमंत्रण",
         heading: "शुभ साखरपुडा",
-        previewText: "चि. संतोष आणि चि.सौ.कां. ऋतुजा<br>यांच्या शुभ साखरपुड्याचे सस्नेह निमंत्रण",
-        coupleHighlight: "संतोष आणि ऋतुजा",
+        previewText: "यांच्या शुभ साखरपुड्याचे सस्नेह निमंत्रण",
+        coupleHighlight: "चि.सौ.कां. ऋतुजा आणि चि. संतोष",
         openBtn: "निमंत्रण पत्रिका उघडा",
         audioHint: "मंगल संगीतासह निमंत्रण पाहण्यासाठी क्लिक करा"
       },
@@ -83,9 +83,9 @@ var INVITATION_CONFIG = {
           name: "संतोष",
           displayName: "चि. संतोष",
           initial: "सं",
-          father: "श्री.  बंडगर",
-          mother: "सौ.  बंडगर",
-          parentageHTML: "सुपुत्र: <span>सौ.  व श्री.  बंडगर</span>"
+          father: "श्री.शिवाजी बंडगर",
+          mother: "सौ.कविता बंडगर",
+          parentageHTML: "सुपुत्र: <span>सौ.कविता व श्री.शिवाजी बंडगर</span>"
         },
         bride: {
           salutation: "चि.सौ.कां.",
@@ -137,15 +137,16 @@ var INVITATION_CONFIG = {
         },
         venueCard: {
           heading: "सोहळ्याचे स्थळ",
-          name: "द ग्रँड राजवाडा पॅलेस व लॉन्स",
-          hall: "रॉयल शीश महल बँक्वेट हॉल",
-          badge: "शाही राजवाडा"
+          name: "विष्णुदास मंगल कार्यालय",
+          hall: "नवीन रेणापूर नाका",
+          badge: "मंगल कार्यालय"
         },
         addressCard: {
           heading: "संपूर्ण पत्ता",
-          line: "रॉयल हेरिटेज एन्क्लेव्ह, लेक व्ह्यू प्रोमेनेड जवळ",
-          city: "उदयपूर, राजस्थान - ३१३००१",
+          line: "नवीन रेणापूर नाका",
+          city: "लातूर, महाराष्ट्र",
           copyBtn: "पत्ता कॉपी करा",
+          directionsBtn: "दिशा-निर्देश"
         }
       },
 
@@ -161,10 +162,9 @@ var INVITATION_CONFIG = {
         footnoteShloka: "॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥",
         copyright: "चि. संतोष व चि.सौ.कां. ऋतुजा यांच्यासाठी मंगलमय सदिच्छा",
         rsvpContacts: [
-          { name: "बंडगर परिवार", phone: "+91 98765 43210" },
-          { name: "गडदे परिवार", phone: "+91 98765 01234" }
+          { name: "बंडगर परिवार", phone: "" },
+          { name: "गडदे परिवार", phone: "+91 9763700631" }
         ],
-        whatsappNumber: "919876543210",
         whatsappMessage: "सप्रेम नमस्कार! आम्ही संतोष आणि ऋतुजा यांच्या शुभ साखरपुडा सोहळ्यास नक्की उपस्थित राहू."
       },
 
@@ -191,8 +191,8 @@ var INVITATION_CONFIG = {
         shloka: "|| श्री गणेशाय नमः || || श्री कुलदेवी प्रसन्न ||",
         subtext: "सस्नेह निमंत्रण",
         heading: "शुभ सगाई समारोह",
-        previewText: "चि. संतोष एवं आयु. ऋतुजा<br>के शुभ सगाई समारोह का सस्नेह निमंत्रण",
-        coupleHighlight: "संतोष एवं ऋतुजा",
+        previewText: "के शुभ सगाई समारोह का सस्नेह निमंत्रण",
+        coupleHighlight: "चि. संतोष एवं आयु. ऋतुजा",
         openBtn: "निमंत्रण पत्र खोलें",
         audioHint: "मंगलमय संगीत के साथ निमंत्रण देखने के लिए क्लिक करें"
       },
@@ -209,9 +209,9 @@ var INVITATION_CONFIG = {
           name: "संतोष",
           displayName: "चि. संतोष",
           initial: "सं",
-          father: "श्री  बंडगर",
-          mother: "श्रीमती  बंडगर",
-          parentageHTML: "सुपुत्र: <span>श्रीमती  एवं श्री  बंडगर</span>"
+          father: "श्री शिवाजी बंडगर",
+          mother: "श्रीमती कविता बंडगर",
+          parentageHTML: "सुपुत्र: <span>श्रीमती कविता एवं श्री शिवाजी बंडगर</span>"
         },
         bride: {
           salutation: "आयु.",
@@ -263,14 +263,14 @@ var INVITATION_CONFIG = {
         },
         venueCard: {
           heading: "समारोह स्थल",
-          name: "द ग्रैंड राजवाड़ा पैलेस एवं लॉन्स",
-          hall: "रॉयल शीश महल बैंक्वेट हॉल",
-          badge: "शाही महल"
+          name: "विष्णुदास मंगल कार्यालय",
+          hall: "नवीन रेणापुर नाका",
+          badge: "मंगल कार्यालय"
         },
         addressCard: {
           heading: "पूरा पता",
-          line: "रॉयल हेरिटेज एन्क्लेव, लेक व्यू प्रोमेनेड के पास",
-          city: "उदयपुर, राजस्थान - ३१३००१",
+          line: "नवीन रेणापुर नाका",
+          city: "लातूर, महाराष्ट्र",
           copyBtn: "पता कॉपी करें",
           directionsBtn: "दिशा-निर्देश"
         }
@@ -287,10 +287,9 @@ var INVITATION_CONFIG = {
         footnoteShloka: "॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥",
         copyright: "चि. संतोष एवं आयु. ऋतुजा के लिए मंगलमय शुभकामनाएँ",
         rsvpContacts: [
-          { name: "बंडगर परिवार", phone: "+91 98765 43210" },
-          { name: "गडदे परिवार", phone: "+91 98765 01234" }
+          { name: "बंडगर परिवार", phone: "" },
+          { name: "गडदे परिवार", phone: "+91 9763700631" }
         ],
-        whatsappNumber: "919876543210",
         whatsappMessage: "सप्रेम नमस्कार! हम संतोष और ऋतुजा के सगाई समारोह में सहर्ष उपस्थित रहेंगे।"
       },
 
@@ -317,7 +316,7 @@ var INVITATION_CONFIG = {
         shloka: "|| Shree Ganeshay Namah || || Shree Kulswamini Prasanna ||",
         subtext: "Cordially Invited",
         heading: "Engagement Ceremony",
-        previewText: "To celebrate the auspicious Engagement Ceremony of<br><strong class='names-highlight'>Santosh &amp; Rutuja</strong>",
+        previewText: "To celebrate the auspicious Engagement Ceremony of",
         coupleHighlight: "Santosh & Rutuja",
         openBtn: "Open Invitation",
         audioHint: "Click to enter with celebratory royal music"
@@ -335,9 +334,9 @@ var INVITATION_CONFIG = {
           name: "Santosh",
           displayName: "Santosh",
           initial: "S",
-          father: "Mr.  Bandgar",
-          mother: "Mrs.  Bandgar",
-          parentageHTML: "Son of <span>Mrs.  &amp; Mr.  Bandgar</span>"
+          father: "Mr. Shivaji Bandgar",
+          mother: "Mrs. Kavita Bandgar",
+          parentageHTML: "Son of <span>Mrs. Kavita &amp; Mr. Shivaji  Bandgar</span>"
         },
         bride: {
           salutation: "",
@@ -389,9 +388,16 @@ var INVITATION_CONFIG = {
         },
         venueCard: {
           heading: "The Venue",
-          name: "The Grand Rajwada Palace & Lawns",
-          hall: "Royal Sheesh Mahal Banquet Hall",
-          badge: "Royal Palace"
+          name: "Vishnudas Mangal Karyalay",
+          hall: "Navin Renapur Naka",
+          badge: "Mangal Karyalay"
+        },
+        addressCard: {
+          heading: "Venue Address",
+          line: "Navin Renapur Naka",
+          city: "Latur, Maharashtra",
+          copyBtn: "Copy Address",
+          directionsBtn: "Get Directions"
         }
       },
 
@@ -406,10 +412,9 @@ var INVITATION_CONFIG = {
         footnoteShloka: "॥ Sarvamangala Mangalye Shive Sarvartha Sadhike ॥",
         copyright: "Crafted with love & blessings for Santosh & Rutuja",
         rsvpContacts: [
-          { name: "Bandgar Family", phone: "+91 98765 43210" },
-          { name: "Gadade Family", phone: "+91 98765 01234" }
+          { name: "Bandgar Family", phone: "" },
+          { name: "Gadade Family", phone: "+91 9763700631" }
         ],
-        whatsappNumber: "919876543210",
         whatsappMessage: "Namaste! We would love to attend the Engagement Ceremony of Santosh and Rutuja."
       },
 

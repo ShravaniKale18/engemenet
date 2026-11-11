@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title id="html-title">शुभ साखरपुडा निमंत्रण पत्रिका | संतोष आणि ऋतुजा</title>
+  <title id="html-title">शुभ साखरपुडा निमंत्रण पत्रिका | ऋतुजा आणि संतोष </title>
   <meta name="description" id="html-meta-desc"
     content="श्रींच्या कृपेने व कुलदेवतेच्या आशीर्वादाने, संतोष आणि ऋतुजा यांच्या शुभ साखरपुडा सोहळ्याचे सस्नेह निमंत्रण.">
   <meta name="theme-color" content="#fcf8f2">
@@ -167,8 +167,8 @@
         </div>
 
         <p class="welcome-couple-preview" id="welcome-couple-preview">
-          चि. संतोष आणि चि.सौ.कां. ऋतुजा<br>
-          <strong class="names-highlight" id="welcome-couple-names">संतोष आणि ऋतुजा</strong>
+          <span id="welcome-invitation-text">यांच्या शुभ साखरपुड्याचे सस्नेह निमंत्रण</span><br>
+          <strong class="names-highlight" id="welcome-couple-names">चि.सौ.कां. ऋतुजा आणि चि. संतोष </strong>
         </p>
 
         <!-- Golden Open Invitation Button with Instant Fallback -->
@@ -298,6 +298,20 @@
               <!-- 2. Couple Introduction: Circular Groom & Bride Portraits -->
               <div class="couple-names-wrapper">
 
+                <!-- Bride Box with Circular Portrait -->
+                <div class="person-box bride-box">
+                  <div class="avatar-ring-wrapper">
+                    <div class="avatar-3d-frame">
+                      <img id="bride-photo" class="avatar-portrait-img" src="images/demo/bride-portrait.jpg"
+                        onerror="this.onerror=null; this.src='assets/bride-placeholder.svg'" alt="चि.सौ.कां. ऋतुजा">
+                    </div>
+                  </div>
+                  <h2 class="person-name" id="bride-name">चि.सौ.कां. ऋतुजा</h2>
+                  <p class="person-parentage" id="bride-parentage">
+                    सुकन्या: <span>सौ. छायाबाई व श्री. हरिश्चंद्र गडदे</span>
+                  </p>
+                </div>
+
                 <!-- Groom Box with Circular Portrait -->
                 <div class="person-box groom-box">
                   <div class="avatar-ring-wrapper">
@@ -308,7 +322,7 @@
                   </div>
                   <h2 class="person-name" id="groom-name">चि. संतोष</h2>
                   <p class="person-parentage" id="groom-parentage">
-                    सुपुत्र: <span>सौ. व श्री. बंडगर</span>
+                    सुपुत्र: <span>सौ. कविता व श्री. शिवाजी बंडगर</span>
                   </p>
                 </div>
 
@@ -323,19 +337,7 @@
                   </div>
                 </div>
 
-                <!-- Bride Box with Circular Portrait -->
-                <div class="person-box bride-box">
-                  <div class="avatar-ring-wrapper">
-                    <div class="avatar-3d-frame">
-                      <img id="bride-photo" class="avatar-portrait-img" src="images/demo/bride-portrait.jpg"
-                        onerror="this.onerror=null; this.src='assets/bride-placeholder.svg'" alt="चि.सौ.कां. ऋतुजा">
-                    </div>
-                  </div>
-                  <h2 class="person-name" id="bride-name">चि.सौ.कां. ऋतुजा</h2>
-                  <p class="person-parentage" id="bride-parentage">
-                    सुकन्या: <span>सौ. छायाबाई व श्री. हरिश्चंद्र गडदे</span>
-                  </p>
-                </div>
+
 
               </div>
 
@@ -429,7 +431,7 @@
               <div class="romantic-photo-overlay">
                 <span class="romantic-photo-tagline" id="romantic-section-title">दोन मने, एक स्पंदन</span>
               </div>
-              <figcaption class="demo-photo-caption" id="romantic-couple-caption">नमुना छायाचित्र (Demo Photography)
+              <figcaption class="demo-photo-caption" id="romantic-couple-caption">
               </figcaption>
             </figure>
           </section>
@@ -515,12 +517,38 @@
                 </div>
                 <h4 class="card-heading" id="venue-card-heading">सोहळ्याचे स्थळ</h4>
                 <div class="card-main-content">
-                  <p class="highlight-info" id="display-venue-name">द ग्रँड राजवाडा पॅलेस व लॉन्स</p>
-                  <p class="sub-info" id="display-venue-hall">रॉयल शीश महल बँक्वेट हॉल</p>
+                  <p class="highlight-info" id="display-venue-name">विष्णुदास मंगल कार्यालय</p>
+                  <p class="sub-info" id="display-venue-hall">नवीन रेणापूर नाका</p>
                 </div>
                 <div class="card-footer-action">
                   <span class="badge-pill" id="venue-badge"><i class="fa-solid fa-archway"></i> <span
-                      id="venue-badge-text">शाही राजवाडा</span></span>
+                      id="venue-badge-text">मंगल कार्यालय</span></span>
+                </div>
+              </div>
+
+              <!-- 4. ADDRESS CARD -->
+              <div class="detail-card">
+                <div class="card-ornament-corner tl"></div>
+                <div class="card-ornament-corner br"></div>
+                <div class="card-icon-wrap">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h4 class="card-heading" id="address-card-heading">संपूर्ण पत्ता</h4>
+                <div class="card-main-content">
+                  <p class="address-text" id="display-address-line">नवीन रेणापूर नाका</p>
+                  <p class="address-city" id="display-city-state">लातूर, महाराष्ट्र</p>
+                </div>
+                <div class="card-footer-action">
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+                    <button id="copy-address-btn" class="card-action-btn">
+                      <i class="fa-regular fa-copy"></i> <span id="copy-address-btn-text">पत्ता कॉपी करा</span>
+                    </button>
+                    <a id="get-directions-btn"
+                      href="https://maps.google.com/?q=Vishnudas+Mangal+Karyalay+Navin+Renapur+Naka+Latur"
+                      target="_blank" rel="noopener noreferrer" class="card-action-btn">
+                      <i class="fa-solid fa-diamond-turn-right"></i> <span id="directions-btn-text">दिशा-निर्देश</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -556,7 +584,7 @@
 
               <div class="signature-block">
                 <p class="with-love-tag" id="with-love-tag">स्नेही: आपले नम्र ❤️</p>
-                <h4 class="the-families-tag" id="the-families-tag">बंडगर व गडदे परिवार</h4>
+                <h4 class="the-families-tag" id="the-families-tag">गडदे व बंडगर परिवार</h4>
               </div>
             </div>
 
@@ -581,7 +609,7 @@
             <div class="footer-bottom-bar">
               <p class="auspicious-ending" id="auspicious-ending">॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये
                 त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥</p>
-              <p class="copyright-note" id="copyright-note-text">चि. संतोष व चि.सौ.कां. ऋतुजा यांच्यासाठी मंगलमय सदिच्छा
+              <p class="copyright-note" id="copyright-note-text">चि.सौ.कां. ऋतुजा व चि. संतोष यांच्यासाठी मंगलमय सदिच्छा
               </p>
             </div>
 
@@ -595,10 +623,8 @@
   </main>
 
   <!-- Audio Element for Traditional Background Melodies -->
-  <audio id="wedding-audio" loop preload="none">
-    <source
-      src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_c896e00b84.mp3?filename=flute-traditional-indian-111867.mp3"
-      type="audio/mpeg">
+  <audio id="wedding-audio" loop preload="auto">
+    <source src="audio/man-dhaga-dhaga.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Toast Notification Container -->
