@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title id="html-title">शुभ साखरपुडा निमंत्रण पत्रिका | संतोष आणि ऋतुजा</title>
+  <meta name="description" id="html-meta-desc"
+    content="श्रींच्या कृपेने व कुलदेवतेच्या आशीर्वादाने, संतोष आणि ऋतुजा यांच्या शुभ साखरपुडा सोहळ्याचे सस्नेह निमंत्रण.">
+  <meta name="theme-color" content="#fcf8f2">
+
+  <!-- Google Fonts for Royal Indian & Marathi Devanagari Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Yatra+One&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Instant Reliable Welcome Screen Opener -->
+  <script>
+    function openInvitationWebsite(e) {
+      if (e) {
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var ws = document.getElementById("welcome-screen");
+      if (ws) {
+        ws.style.display = "none";
+        try {
+          if (ws.parentNode) ws.parentNode.removeChild(ws);
+        } catch (err) { }
+      }
+      var reveals = document.querySelectorAll(".reveal-fade");
+      for (var i = 0; i < reveals.length; i++) {
+        reveals[i].classList.add("revealed");
+      }
+      var main = document.getElementById("main-content");
+      if (main) {
+        main.scrollIntoView({ behavior: "smooth" });
+      }
+      try {
+        if (typeof playWeddingMusic === "function") playWeddingMusic();
+      } catch (err) { }
+      try {
+        if (typeof window.triggerPetalCelebration === "function") window.triggerPetalCelebration();
+      } catch (err) { }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Gentle Background Petals Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Audio, Language Switcher & Quick Action Controls -->
+  <aside class="floating-controls" aria-label="Controls">
+
+    <!-- 🌐 Language Switcher Toggle & Menu -->
+    <div class="lang-switcher-wrapper" id="lang-switcher-wrap">
+      <button type="button" id="lang-toggle-btn" class="control-btn lang-toggle-btn" title="भाषा बदला / Change Language"
+        aria-label="भाषा बदला / Change Language">
+        <i class="fa-solid fa-language"></i>
+        <span class="active-lang-text" id="active-lang-label">मराठी</span>
+      </button>
+      <div class="lang-dropdown-menu" id="lang-dropdown-menu" aria-label="Language options">
+        <button type="button" class="lang-opt-item active" data-lang="mr">
+          <span class="lang-flag">🌸</span>
+          <span class="opt-name">मराठी</span>
+          <i class="fa-solid fa-check opt-check"></i>
+        </button>
+        <button type="button" class="lang-opt-item" data-lang="hi">
+          <span class="lang-flag">🪷</span>
+          <span class="opt-name">हिंदी</span>
+          <i class="fa-solid fa-check opt-check"></i>
+        </button>
+        <button type="button" class="lang-opt-item" data-lang="en">
+          <span class="lang-flag">✨</span>
+          <span class="opt-name">English</span>
+          <i class="fa-solid fa-check opt-check"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Music Player Toggle -->
+    <button id="music-toggle-btn" class="control-btn" title="संगीत सुरू / बंद करा" aria-label="संगीत सुरू / बंद करा">
+      <i class="fa-solid fa-music"></i>
+      <span class="music-wave" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+
+    <!-- Share Button -->
+    <button id="share-btn" class="control-btn" title="निमंत्रण शेअर करा" aria-label="निमंत्रण शेअर करा">
+      <i class="fa-solid fa-share-nodes"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button id="scroll-top-btn" class="control-btn" title="वर जा" aria-label="वर जा">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </aside>
+
+
+  <!-- ========================================== -->
+  <!-- 1. WELCOME SCREEN                          -->
+  <!-- ========================================== -->
+  <div id="welcome-screen" class="welcome-screen" role="dialog" aria-modal="true" aria-label="Welcome Invitation">
+    <div class="welcome-overlay"></div>
+
+    <!-- Royal Garland Top -->
+    <div class="welcome-floral-top" aria-hidden="true">
+      <div class="garland-left"></div>
+      <div class="garland-center">
+        <svg viewBox="0 0 100 100" class="mandala-icon">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2,2" />
+          <path d="M50 5 C55 25, 75 45, 95 50 C75 55, 55 75, 50 95 C45 75, 25 55, 5 50 C25 45, 45 25, 50 5 Z"
+            fill="rgba(212,175,55,0.2)" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="50" cy="50" r="15" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="garland-right"></div>
+    </div>
+
+    <!-- Royal Card Centerpiece -->
+    <div class="royal-envelope-box">
+      <div class="ornate-border-box">
+        <span class="corner-ornament top-left"></span>
+        <span class="corner-ornament top-right"></span>
+        <span class="corner-ornament bottom-left"></span>
+        <span class="corner-ornament bottom-right"></span>
+
+        <!-- Auspicious Vedic Shloka -->
+        <p class="welcome-shloka" id="welcome-shloka">|| श्री गणेशाय नमः || || श्री कुलस्वामिनी प्रसन्न ||</p>
+
+        <!-- Traditional Ganesh Motif SVG -->
+        <div class="ganesha-emblem" aria-hidden="true">
+          <svg viewBox="0 0 120 120" class="ganesh-svg">
+            <path d="M60 15 C65 15, 72 20, 72 28 C72 35, 66 40, 60 42 C54 40, 48 35, 48 28 C48 20, 55 15, 60 15 Z"
+              fill="none" stroke="currentColor" stroke-width="2.5" />
+            <path d="M60 42 C68 45, 76 52, 74 65 C72 78, 62 88, 60 92 C58 88, 48 78, 46 65 C44 52, 52 45, 60 42 Z"
+              fill="none" stroke="currentColor" stroke-width="2.5" />
+            <path d="M60 55 Q68 70, 72 80 Q76 90, 70 98 Q64 104, 55 100" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="60" cy="27" r="3" fill="currentColor" />
+            <path d="M35 45 Q45 35, 50 45 Q42 55, 35 45 Z" fill="currentColor" opacity="0.3" />
+            <path d="M85 45 Q75 35, 70 45 Q78 55, 85 45 Z" fill="currentColor" opacity="0.3" />
+            <circle cx="60" cy="36" r="1.5" fill="#c0392b" />
+          </svg>
+        </div>
+
+        <p class="welcome-subtext" id="welcome-subtext">सस्नेह निमंत्रण</p>
+        <h1 class="welcome-heading" id="welcome-heading">शुभ साखरपुडा</h1>
+
+        <div class="welcome-divider">
+          <span class="divider-line"></span>
+          <span class="divider-gem">💍</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="welcome-couple-preview" id="welcome-couple-preview">
+          चि. संतोष आणि चि.सौ.कां. ऋतुजा<br>
+          <strong class="names-highlight" id="welcome-couple-names">संतोष आणि ऋतुजा</strong>
+        </p>
+
+        <!-- Golden Open Invitation Button with Instant Fallback -->
+        <button type="button" id="open-invite-btn" class="royal-gold-btn" onclick="openInvitationWebsite(event)"
+          aria-label="Open Invitation Website">
+          <span class="btn-shine"></span>
+          <span class="btn-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+          <span class="btn-text" id="welcome-open-btn-text">निमंत्रण पत्रिका उघडा</span>
+          <span class="btn-sparkle">✦</span>
+        </button>
+
+        <p class="audio-hint-text" id="welcome-audio-hint">
+          <i class="fa-solid fa-volume-high"></i> मंगल संगीतासह निमंत्रण पाहण्यासाठी क्लिक करा
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Garland -->
+    <div class="welcome-floral-bottom" aria-hidden="true">
+      <div class="garland-bottom-pattern"></div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MAIN INVITATION CARD CONTENT               -->
+  <!-- ========================================== -->
+  <main class="main-invitation-container" id="main-content">
+
+    <article class="royal-card-wrapper">
+
+      <!-- Ornate Outer Gold Borders -->
+      <div class="outer-gold-frame">
+        <div class="inner-filigree-frame">
+
+          <!-- Golden Corner Motifs -->
+          <div class="frame-corner corner-tl" aria-hidden="true"></div>
+          <div class="frame-corner corner-tr" aria-hidden="true"></div>
+          <div class="frame-corner corner-bl" aria-hidden="true"></div>
+          <div class="frame-corner corner-br" aria-hidden="true"></div>
+
+          <!-- Top Traditional Invocation Header -->
+          <header class="card-header reveal-fade">
+            <div class="shloka-banner">
+              <span class="shloka-ornament left">🌸</span>
+              <p class="shloka-text" id="main-shloka">|| श्री गणेशाय नमः || || श्री कुलस्वामिनी प्रसन्न ||</p>
+              <span class="shloka-ornament right">🌸</span>
+            </div>
+
+            <div class="traditional-kalash-icon" aria-hidden="true">
+              <svg viewBox="0 0 100 100" class="kalash-svg">
+                <!-- Kalash Pot -->
+                <ellipse cx="50" cy="72" rx="26" ry="20" fill="url(#goldGradient)" stroke="#8e6a1d"
+                  stroke-width="1.5" />
+                <!-- Base -->
+                <ellipse cx="50" cy="90" rx="16" ry="4" fill="url(#goldGradient)" stroke="#8e6a1d" stroke-width="1" />
+                <!-- Neck & Rim -->
+                <rect x="40" y="52" width="20" height="8" rx="2" fill="url(#goldGradient)" stroke="#8e6a1d"
+                  stroke-width="1.5" />
+                <ellipse cx="50" cy="52" rx="14" ry="4" fill="#eed994" stroke="#8e6a1d" stroke-width="1.5" />
+                <!-- Coconut -->
+                <circle cx="50" cy="40" r="14" fill="#a0522d" stroke="#683416" stroke-width="1.5" />
+                <!-- Mango Leaves -->
+                <path d="M50 48 Q35 30 25 38 Q35 50 46 50 Z" fill="#2d7a3e" opacity="0.9" />
+                <path d="M50 48 Q65 30 75 38 Q65 50 54 50 Z" fill="#2d7a3e" opacity="0.9" />
+                <path d="M50 46 Q50 20 42 22 Q46 38 49 46 Z" fill="#3b964f" />
+                <path d="M50 46 Q50 20 58 22 Q54 38 51 46 Z" fill="#3b964f" />
+                <!-- Swastik or auspicious dot on pot -->
+                <circle cx="50" cy="72" r="3" fill="#c0392b" />
+                <defs>
+                  <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#bf953f" />
+                    <stop offset="35%" stop-color="#fcf6ba" />
+                    <stop offset="60%" stop-color="#b38728" />
+                    <stop offset="100%" stop-color="#aa771c" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <p class="family-invitation-intro" id="family-announcement">
+              सप्रेम नमस्कार, आमच्या कुटुंबियांच्या वतीने आपणास कळविण्यास अत्यंत आनंद होत आहे की, आमच्या मुलाचा व मुलीचा
+              शुभ साखरपुडा सोहळा करण्याचे योजिले आहे.
+            </p>
+          </header>
+
+
+          <!-- ========================================== -->
+          <!-- 2. COUPLE HERO SECTION WITH PORTRAITS      -->
+          <!-- ========================================== -->
+          <section class="couple-hero-section reveal-fade" aria-label="The Couple">
+
+            <div class="royal-arch-container">
+              <!-- Arch Jharokha Floral Top -->
+              <div class="jharokha-top" aria-hidden="true">
+                <svg viewBox="0 0 500 120" preserveAspectRatio="none" class="arch-svg">
+                  <path d="M 0,120 Q 120,40 200,60 Q 250,10 300,60 Q 380,40 500,120 L 500,0 L 0,0 Z"
+                    fill="rgba(247, 220, 212, 0.4)" />
+                  <path d="M 20,120 Q 130,55 205,72 Q 250,25 295,72 Q 370,55 480,120" fill="none" stroke="#d4af37"
+                    stroke-width="2" />
+                </svg>
+              </div>
+
+              <!-- Intertwined Monogram Medallion -->
+              <div class="monogram-badge" aria-hidden="true">
+                <div class="monogram-ring">
+                  <span class="monogram-letters" id="monogram-display">सं &amp; ऋ</span>
+                </div>
+              </div>
+
+              <!-- 1. Large Demo Couple Portrait -->
+              <figure class="hero-couple-frame floral-photo-frame">
+                <div class="floral-frame-petals" aria-hidden="true">
+                  <span class="petal petal-tl">❀</span>
+                  <span class="petal petal-tr">❀</span>
+                  <span class="petal petal-bl">❀</span>
+                  <span class="petal petal-br">❀</span>
+                </div>
+                <div class="photo-zoom-wrap hero-couple-zoom">
+                  <img id="hero-couple-photo" class="styled-photo" src="images/demo/couple-hero.jpg"
+                    onerror="this.onerror=null; this.src='assets/couple-hero.svg'"
+                    alt="भारतीय वधू-वर साखरपुडा छायाचित्र" width="768" height="1024" decoding="async">
+                </div>
+                <figcaption class="demo-photo-caption" id="hero-couple-caption"></figcaption>
+              </figure>
+
+              <!-- 2. Couple Introduction: Circular Groom & Bride Portraits -->
+              <div class="couple-names-wrapper">
+
+                <!-- Groom Box with Circular Portrait -->
+                <div class="person-box groom-box">
+                  <div class="avatar-ring-wrapper">
+                    <div class="avatar-3d-frame">
+                      <img id="groom-photo" class="avatar-portrait-img" src="images/demo/groom-portrait.jpg"
+                        onerror="this.onerror=null; this.src='assets/groom-placeholder.svg'" alt="चि. संतोष">
+                    </div>
+                  </div>
+                  <h2 class="person-name" id="groom-name">चि. संतोष</h2>
+                  <p class="person-parentage" id="groom-parentage">
+                    सुपुत्र: <span>सौ. व श्री. बंडगर</span>
+                  </p>
+                </div>
+
+                <!-- Romantic '&' and Engagement Rings -->
+                <div class="couple-connector">
+                  <div class="animated-ampersand-wrap">
+                    <span class="glowing-ampersand">&amp;</span>
+                    <div class="ring-pulse-animation">
+                      <i class="fa-solid fa-ring gold-ring ring-1"></i>
+                      <i class="fa-solid fa-ring gold-ring ring-2"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bride Box with Circular Portrait -->
+                <div class="person-box bride-box">
+                  <div class="avatar-ring-wrapper">
+                    <div class="avatar-3d-frame">
+                      <img id="bride-photo" class="avatar-portrait-img" src="images/demo/bride-portrait.jpg"
+                        onerror="this.onerror=null; this.src='assets/bride-placeholder.svg'" alt="चि.सौ.कां. ऋतुजा">
+                    </div>
+                  </div>
+                  <h2 class="person-name" id="bride-name">चि.सौ.कां. ऋतुजा</h2>
+                  <p class="person-parentage" id="bride-parentage">
+                    सुकन्या: <span>सौ. छायाबाई व श्री. हरिश्चंद्र गडदे</span>
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Subtitle & Romantic Tagline -->
+              <div class="couple-subtitle-wrap">
+                <div class="floral-divider-sm">
+                  <span class="f-leaf">❧</span>
+                  <span class="f-rose">🌹</span>
+                  <span class="f-leaf">☙</span>
+                </div>
+                <h3 class="romantic-subtitle" id="couple-subtitle">दोन जीवांचे मीलन, एका नव्या प्रवासाची सुरुवात</h3>
+                <p class="romantic-quote" id="couple-quote">
+                  "आई-वडिलांचे आशीर्वाद आणि थोरामोठ्यांच्या सानिध्यात, आम्ही घेत आहोत जन्मोजन्मीच्या रेशीमगाठीचा पवित्र
+                  संकल्प..."
+                </p>
+                <div class="wedding-hashtag-pill" id="couple-hashtag">#संतोष_ऋतुजा</div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <!-- ========================================== -->
+          <!-- 3. LIVE COUNTDOWN TIMER                    -->
+          <!-- ========================================== -->
+          <section class="countdown-section reveal-fade" aria-label="Countdown to Engagement">
+            <div class="section-title-wrap">
+              <span class="pre-title" id="countdown-pre-title">शुभ दिनाची आतुरता</span>
+              <h3 class="section-title" id="countdown-main-title">मंगल सोहळा सुरू होण्यासाठी उरलेला वेळ</h3>
+              <div class="gold-accent-line"></div>
+            </div>
+
+            <div class="countdown-timer" id="countdown-timer" role="timer" aria-live="polite">
+              <!-- Days -->
+              <div class="countdown-card">
+                <div class="card-inner">
+                  <span class="time-digit" id="days-val">00</span>
+                  <span class="time-label" id="days-label">दिवस</span>
+                </div>
+                <div class="glow-edge"></div>
+              </div>
+
+              <!-- Hours -->
+              <div class="countdown-card">
+                <div class="card-inner">
+                  <span class="time-digit" id="hours-val">00</span>
+                  <span class="time-label" id="hours-label">तास</span>
+                </div>
+                <div class="glow-edge"></div>
+              </div>
+
+              <!-- Minutes -->
+              <div class="countdown-card">
+                <div class="card-inner">
+                  <span class="time-digit" id="minutes-val">00</span>
+                  <span class="time-label" id="minutes-label">मिनिटे</span>
+                </div>
+                <div class="glow-edge"></div>
+              </div>
+
+              <!-- Seconds -->
+              <div class="countdown-card seconds-card">
+                <div class="card-inner">
+                  <span class="time-digit" id="seconds-val">00</span>
+                  <span class="time-label" id="seconds-label">सेकंद</span>
+                </div>
+                <div class="glow-edge"></div>
+              </div>
+            </div>
+
+            <p class="countdown-status" id="countdown-status">आपली उपस्थिती आमच्यासाठी अत्यंत प्रार्थनीय आहे!</p>
+          </section>
+
+
+          <!-- ========================================== -->
+          <!-- 3. MID-PAGE ROMANTIC COUPLE PHOTOGRAPH     -->
+          <!-- ========================================== -->
+          <section class="romantic-couple-showcase reveal-fade" aria-label="Romantic Couple Portrait">
+            <figure class="romantic-photo-3d-card">
+              <div class="floral-frame-petals" aria-hidden="true">
+                <span class="petal petal-tl">❀</span>
+                <span class="petal petal-tr">❀</span>
+                <span class="petal petal-bl">❀</span>
+                <span class="petal petal-br">❀</span>
+              </div>
+              <div class="photo-zoom-wrap romantic-zoom">
+                <img id="romantic-couple-photo" class="styled-photo" src="images/demo/couple-romantic.jpg"
+                  onerror="this.onerror=null; this.src='assets/couple-romantic.svg'" alt="संतोष आणि ऋतुजा"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="romantic-photo-overlay">
+                <span class="romantic-photo-tagline" id="romantic-section-title">दोन मने, एक स्पंदन</span>
+              </div>
+              <figcaption class="demo-photo-caption" id="romantic-couple-caption">नमुना छायाचित्र (Demo Photography)
+              </figcaption>
+            </figure>
+          </section>
+
+
+          <!-- ========================================== -->
+          <!-- 4. EVENT DETAILS CARDS                     -->
+          <!-- ========================================== -->
+          <section class="event-details-section reveal-fade" id="details" aria-label="Event Details">
+            <div class="section-title-wrap">
+              <span class="pre-title" id="details-pre-title">सोहळ्याची माहिती</span>
+              <h3 class="section-title" id="details-section-title">शुभ मुहूर्त व स्थळ</h3>
+              <div class="gold-accent-line"></div>
+              <p class="section-subtitle" id="details-subtitle">आमच्या या मंगल सोहळ्यास आपण सहकुटुंब उपस्थित राहून
+                वधू-वरास शुभाशीर्वाद द्यावेत</p>
+            </div>
+
+            <!-- Demo Engagement Rings Photograph -->
+            <figure class="rings-photo-frame floral-photo-frame">
+              <div class="floral-frame-petals compact" aria-hidden="true">
+                <span class="petal petal-tl">❀</span>
+                <span class="petal petal-tr">❀</span>
+                <span class="petal petal-bl">❀</span>
+                <span class="petal petal-br">❀</span>
+              </div>
+              <p class="rings-photo-title" id="rings-photo-title">शुभ वाङ्निश्चय अंगठ्या</p>
+              <div class="photo-zoom-wrap rings-zoom">
+                <img id="engagement-rings-photo" class="styled-photo" src="images/demo/engagement-rings.jpg"
+                  onerror="this.onerror=null; this.src='assets/rings-placeholder.svg'" alt="साखरपुडा अंगठ्या"
+                  width="800" height="520" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="demo-photo-caption" id="rings-photo-caption">
+              </figcaption>
+            </figure>
+
+            <div class="details-grid">
+
+              <!-- 1. DATE CARD -->
+              <div class="detail-card">
+                <div class="card-ornament-corner tl"></div>
+                <div class="card-ornament-corner br"></div>
+                <div class="card-icon-wrap">
+                  <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <h4 class="card-heading" id="date-card-heading">शुभ दिन व तारीख</h4>
+                <div class="card-main-content">
+                  <p class="highlight-info" id="display-date">सोमवार, ३० नोव्हेंबर २०२६</p>
+                  <p class="sub-info" id="date-card-subinfo">या मंगलदिनी आपली उपस्थिती प्रार्थनीय आहे</p>
+                </div>
+                <div class="card-footer-action">
+                  <button id="add-calendar-btn" class="card-action-btn">
+                    <i class="fa-solid fa-calendar-plus"></i> <span id="add-calendar-btn-text">कॅलेंडरमध्ये जोडा</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. TIME CARD -->
+              <div class="detail-card">
+                <div class="card-ornament-corner tl"></div>
+                <div class="card-ornament-corner br"></div>
+                <div class="card-icon-wrap">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <h4 class="card-heading" id="time-card-heading">शुभ वेळ</h4>
+                <div class="card-main-content">
+                  <p class="highlight-info" id="display-time">सायंकाळी ०६:३० वाजता</p>
+                  <p class="sub-info highlight-gold" id="display-muhurat">
+                    <i class="fa-solid fa-sparkles"></i> शुभ वाङ्निश्चय मुहूर्त: सायंकाळी ०७:४५ वाजता
+                  </p>
+                </div>
+                <div class="card-footer-action">
+                  <span class="badge-pill" id="time-badge"><i class="fa-solid fa-moon"></i> <span
+                      id="time-badge-text">संध्याकाळचा सोहळा</span></span>
+                </div>
+              </div>
+
+              <!-- 3. VENUE CARD -->
+              <div class="detail-card">
+                <div class="card-ornament-corner tl"></div>
+                <div class="card-ornament-corner br"></div>
+                <div class="card-icon-wrap">
+                  <i class="fa-solid fa-hotel"></i>
+                </div>
+                <h4 class="card-heading" id="venue-card-heading">सोहळ्याचे स्थळ</h4>
+                <div class="card-main-content">
+                  <p class="highlight-info" id="display-venue-name">द ग्रँड राजवाडा पॅलेस व लॉन्स</p>
+                  <p class="sub-info" id="display-venue-hall">रॉयल शीश महल बँक्वेट हॉल</p>
+                </div>
+                <div class="card-footer-action">
+                  <span class="badge-pill" id="venue-badge"><i class="fa-solid fa-archway"></i> <span
+                      id="venue-badge-text">शाही राजवाडा</span></span>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+
+          </section>
+
+
+
+
+
+          <!-- ========================================== -->
+          <!-- 6. FINAL INVITATION & RSVP SECTION         -->
+          <!-- ========================================== -->
+          <footer class="final-invitation-section reveal-fade" aria-label="Closing & RSVP">
+
+            <div class="ornate-separator" aria-hidden="true">
+              <span class="flourish">꧁</span>
+              <span class="flower-icon">⚜</span>
+              <span class="flourish">꧂</span>
+            </div>
+
+            <!-- Closing Message -->
+            <div class="closing-message-box">
+              <p class="closing-text" id="closing-text">
+                "आपली उपस्थिती आमच्या आनंदात द्विगुणित भर घालेल. या मंगल सोहळ्यास आपण सहकुटुंब, सहपरिवार उपस्थित राहून
+                वधू-वरास शुभाशीर्वाद द्यावेत हीच नम्र विनंती."
+              </p>
+
+              <div class="signature-block">
+                <p class="with-love-tag" id="with-love-tag">स्नेही: आपले नम्र ❤️</p>
+                <h4 class="the-families-tag" id="the-families-tag">बंडगर व गडदे परिवार</h4>
+              </div>
+            </div>
+
+            <!-- RSVP Action Card -->
+            <div class="rsvp-action-box">
+              <h4 class="rsvp-heading" id="rsvp-heading">उपस्थितीची पूर्वकल्पना द्यावी ही नम्र विनंती</h4>
+              <p class="rsvp-subtext" id="rsvp-subtext">आपण उपस्थित राहणार असल्यास कृपया येथे नोंदवावी</p>
+
+              <div class="rsvp-buttons-wrap">
+                <button id="add-cal-bottom-btn" class="save-cal-btn">
+                  <i class="fa-regular fa-calendar-check"></i> <span id="add-cal-bottom-btn-text">कॅलेंडर सेव्ह
+                    करा</span>
+                </button>
+              </div>
+
+              <div class="rsvp-contacts-list" id="rsvp-contacts-list">
+                <!-- Dynamically populated from config -->
+              </div>
+            </div>
+
+            <!-- Bottom Royal Footnote -->
+            <div class="footer-bottom-bar">
+              <p class="auspicious-ending" id="auspicious-ending">॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये
+                त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥</p>
+              <p class="copyright-note" id="copyright-note-text">चि. संतोष व चि.सौ.कां. ऋतुजा यांच्यासाठी मंगलमय सदिच्छा
+              </p>
+            </div>
+
+          </footer>
+
+        </div> <!-- inner-filigree-frame -->
+      </div> <!-- outer-gold-frame -->
+
+    </article>
+
+  </main>
+
+  <!-- Audio Element for Traditional Background Melodies -->
+  <audio id="wedding-audio" loop preload="none">
+    <source
+      src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_c896e00b84.mp3?filename=flute-traditional-indian-111867.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
