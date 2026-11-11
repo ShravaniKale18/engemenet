@@ -8,7 +8,7 @@
 
 var INVITATION_CONFIG = {
   // Auspicious Engagement Date & Time (Used for Live Countdown)
-  eventDate: "2026-11-30T18:30:00",
+  eventDate: "2026-11-30T12:30:00",
   defaultLanguage: "mr",
 
   /* ==================================================================
@@ -77,7 +77,7 @@ var INVITATION_CONFIG = {
       },
 
       couple: {
-        monogram: "सं & ऋ",
+        monogram: "ऋ & सं",
         groom: {
           salutation: "चि.",
           name: "संतोष",
@@ -98,11 +98,11 @@ var INVITATION_CONFIG = {
         },
         subtitle: "दोन जीवांचे मीलन, एका नव्या प्रवासाची सुरुवात",
         quote: "आई-वडिलांचे आशीर्वाद आणि थोरामोठ्यांच्या सानिध्यात, आम्ही घेत आहोत जन्मोजन्मीच्या रेशीमगाठीचा पवित्र संकल्प...",
-        hashtag: "#संतोष_ऋतुजा",
+        hashtag: "#ऋतुजा_संतोष",
         heroAlt: "भारतीय वधू-वर साखरपुडा छायाचित्र",
         brideAlt: "चि.सौ.कां. ऋतुजा — वधू",
         groomAlt: "चि. संतोष — वर",
-        romanticAlt: "संतोष आणि ऋतुजा — रोमँटिक छायाचित्र",
+        romanticAlt: "ऋतुजा आणि संतोष — रोमँटिक छायाचित्र",
         ringsAlt: "शुभ साखरपुडा सुवर्ण अंगठ्या",
         romanticTitle: "दोन मने, एक स्पंदन",
         ringsTitle: "शुभ वाङ्निश्चय अंगठ्या"
@@ -131,9 +131,9 @@ var INVITATION_CONFIG = {
         },
         timeCard: {
           heading: "शुभ वेळ",
-          display: "सायंकाळी ०६:३० वाजता",
-          muhurat: "शुभ वाङ्निश्चय मुहूर्त: सायंकाळी ०७:४५ वाजता",
-          badge: "संध्याकाळचा सोहळा"
+          display: "दुपारी १२:३० वाजता",
+          muhurat: "शुभ वाङ्निश्चय मुहूर्त: दुपारी १२:३० वाजता",
+          badge: "दुपारचा सोहळा"
         },
         venueCard: {
           heading: "सोहळ्याचे स्थळ",
@@ -154,18 +154,18 @@ var INVITATION_CONFIG = {
       footer: {
         closingText: "आपली उपस्थिती आमच्या आनंदात द्विगुणित भर घालेल. या मंगल सोहळ्यास आपण सहकुटुंब, सहपरिवार उपस्थित राहून वधू-वरास शुभाशीर्वाद द्यावेत हीच नम्र विनंती.",
         signatureWithLove: "स्नेही: आपले नम्र ❤️",
-        families: "बंडगर व गडदे परिवार",
+        families: "गडदे व बंडगर परिवार",
         rsvpHeading: "उपस्थितीची पूर्वकल्पना द्यावी ही नम्र विनंती",
         rsvpSubtext: "आपण उपस्थित राहणार असल्यास कृपया येथे नोंदवावी",
         whatsappBtn: "व्हॉट्सॲपवर उपस्थिती नोंदवा",
         saveCalBtn: "कॅलेंडर सेव्ह करा",
         footnoteShloka: "॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥",
-        copyright: "चि. संतोष व चि.सौ.कां. ऋतुजा यांच्यासाठी मंगलमय सदिच्छा",
+        copyright: "चि.सौ.कां. ऋतुजा व चि. संतोष यांच्यासाठी मंगलमय सदिच्छा",
         rsvpContacts: [
-          { name: "बंडगर परिवार", phone: "" },
-          { name: "गडदे परिवार", phone: "+91 9763700631" }
+          { name: "गडदे परिवार", phone: "+91 9763700631" },
+          { name: "बंडगर परिवार", phone: "" }
         ],
-        whatsappMessage: "सप्रेम नमस्कार! आम्ही संतोष आणि ऋतुजा यांच्या शुभ साखरपुडा सोहळ्यास नक्की उपस्थित राहू."
+        whatsappMessage: "सप्रेम नमस्कार! आम्ही ऋतुजा आणि संतोष यांच्या शुभ साखरपुडा सोहळ्यास नक्की उपस्थित राहू."
       },
 
       toasts: {
@@ -184,15 +184,15 @@ var INVITATION_CONFIG = {
     hi: {
       langCode: "hi",
       langName: "हिंदी",
-      pageTitle: "शुभ सगाई निमंत्रण पत्र | संतोष एवं ऋतुजा",
-      metaDesc: "भगवान श्री गणेश जी एवं कुलदेवी के आशीर्वाद से, संतोष एवं ऋतुजा के शुभ सगाई समारोह का सस्नेह निमंत्रण।",
+      pageTitle: "शुभ सगाई निमंत्रण पत्र | ऋतुजा एवं संतोष",
+      metaDesc: "भगवान श्री गणेश जी एवं कुलदेवी के आशीर्वाद से, ऋतुजा एवं संतोष के शुभ सगाई समारोह का सस्नेह निमंत्रण।",
 
       welcome: {
         shloka: "|| श्री गणेशाय नमः || || श्री कुलदेवी प्रसन्न ||",
         subtext: "सस्नेह निमंत्रण",
         heading: "शुभ सगाई समारोह",
         previewText: "के शुभ सगाई समारोह का सस्नेह निमंत्रण",
-        coupleHighlight: "चि. संतोष एवं आयु. ऋतुजा",
+        coupleHighlight: "आयु. ऋतुजा एवं चि. संतोष",
         openBtn: "निमंत्रण पत्र खोलें",
         audioHint: "मंगलमय संगीत के साथ निमंत्रण देखने के लिए क्लिक करें"
       },
@@ -203,7 +203,7 @@ var INVITATION_CONFIG = {
       },
 
       couple: {
-        monogram: "सं & ऋ",
+        monogram: "ऋ & सं",
         groom: {
           salutation: "चि.",
           name: "संतोष",
@@ -224,11 +224,11 @@ var INVITATION_CONFIG = {
         },
         subtitle: "दो आत्माओं का मिलन, एक सुंदर नए सफर की शुरुआत",
         quote: "माता-पिता के आशीर्वाद और अपनों के स्नेह के साथ, हम ले रहे हैं जन्म-जन्मांतर के पावन बंधन का संकल्प...",
-        hashtag: "#संतोष_संग_ऋतुजा",
+        hashtag: "#ऋतुजा_संग_संतोष",
         heroAlt: "भारतीय वधू-वर सगाई चित्र",
         brideAlt: "आयु. ऋतुजा — वधू",
         groomAlt: "चि. संतोष — वर",
-        romanticAlt: "संतोष एवं ऋतुजा — युगल चित्र",
+        romanticAlt: "ऋतुजा एवं संतोष — युगल चित्र",
         ringsAlt: "शुभ सगाई की स्वर्ण मुद्रिका",
         romanticTitle: "प्रेम और परंपरा का पावन बंधन",
         ringsTitle: "शुभ सगाई की अंगूठियाँ"
@@ -257,9 +257,9 @@ var INVITATION_CONFIG = {
         },
         timeCard: {
           heading: "शुभ समय",
-          display: "सायं ०६:३० बजे से",
-          muhurat: "शुभ सगाई / अंगूठी मुहूर्त: सायं ०७:४५ बजे",
-          badge: "संध्या उत्सव"
+          display: "दोपहर १२:३० बजे से",
+          muhurat: "शुभ सगाई / अंगूठी मुहूर्त: दोपहर १२:३० बजे",
+          badge: "दोपहर उत्सव"
         },
         venueCard: {
           heading: "समारोह स्थल",
@@ -279,18 +279,18 @@ var INVITATION_CONFIG = {
       footer: {
         closingText: "आपकी गरिमामयी उपस्थिति हमारे इस मांगलिक उत्सव की शोभा बढ़ाएगी। आप सपरिवार पधारकर नवयुगल को अपना स्नेहिल आशीर्वाद प्रदान करें, यही हमारी विनम्र प्रार्थना है।",
         signatureWithLove: "सस्नेह: आपके अपने ❤️",
-        families: "बंडगर एवं गडदे परिवार",
+        families: "गडदे एवं बंडगर परिवार",
         rsvpHeading: "उपस्थिति की पूर्व सूचना सादर प्रार्थनीय",
         rsvpSubtext: "यदि आप पधार रहे हैं तो कृपया यहाँ सूचित करें",
         whatsappBtn: "व्हाट्सएप पर पुष्टि करें",
         saveCalBtn: "कैलेंडर सेव करें",
         footnoteShloka: "॥ सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके । शरण्ये त्र्यंबके गौरि नारायणि नमोऽस्तु ते ॥",
-        copyright: "चि. संतोष एवं आयु. ऋतुजा के लिए मंगलमय शुभकामनाएँ",
+        copyright: "आयु. ऋतुजा एवं चि. संतोष के लिए मंगलमय शुभकामनाएँ",
         rsvpContacts: [
-          { name: "बंडगर परिवार", phone: "" },
-          { name: "गडदे परिवार", phone: "+91 9763700631" }
+          { name: "गडदे परिवार", phone: "+91 9763700631" },
+          { name: "बंडगर परिवार", phone: "" }
         ],
-        whatsappMessage: "सप्रेम नमस्कार! हम संतोष और ऋतुजा के सगाई समारोह में सहर्ष उपस्थित रहेंगे।"
+        whatsappMessage: "सप्रेम नमस्कार! हम ऋतुजा और संतोष के सगाई समारोह में सहर्ष उपस्थित रहेंगे।"
       },
 
       toasts: {
@@ -309,15 +309,15 @@ var INVITATION_CONFIG = {
     en: {
       langCode: "en",
       langName: "English",
-      pageTitle: "Engagement Invitation Card | Santosh & Rutuja",
-      metaDesc: "With the divine blessings of our families, cordially invite you to celebrate the Engagement Ceremony of Santosh and Rutuja.",
+      pageTitle: "Engagement Invitation Card | Rutuja & Santosh",
+      metaDesc: "With the divine blessings of our families, cordially invite you to celebrate the Engagement Ceremony of Rutuja and Santosh.",
 
       welcome: {
         shloka: "|| Shree Ganeshay Namah || || Shree Kulswamini Prasanna ||",
         subtext: "Cordially Invited",
         heading: "Engagement Ceremony",
         previewText: "To celebrate the auspicious Engagement Ceremony of",
-        coupleHighlight: "Santosh & Rutuja",
+        coupleHighlight: "Rutuja & Santosh",
         openBtn: "Open Invitation",
         audioHint: "Click to enter with celebratory royal music"
       },
@@ -328,7 +328,7 @@ var INVITATION_CONFIG = {
       },
 
       couple: {
-        monogram: "S & R",
+        monogram: "R & S",
         groom: {
           salutation: "",
           name: "Santosh",
@@ -349,11 +349,11 @@ var INVITATION_CONFIG = {
         },
         subtitle: "Two Souls, One Beautiful Journey",
         quote: "With the blessings of our ancestors and families, we take the first step towards an eternal bond of love and togetherness.",
-        hashtag: "#SantoshWedsRutuja",
+        hashtag: "#RutujaWedsSantosh",
         heroAlt: "Indian Engagement Couple Portrait",
         brideAlt: "Rutuja — Bride Portrait",
         groomAlt: "Santosh — Groom Portrait",
-        romanticAlt: "Santosh & Rutuja — Romantic Portrait",
+        romanticAlt: "Rutuja & Santosh — Romantic Portrait",
         ringsAlt: "Auspicious Engagement Rings",
         romanticTitle: "Two Hearts, One Rhythm",
         ringsTitle: "The Sacred Rings"
@@ -373,7 +373,7 @@ var INVITATION_CONFIG = {
       details: {
         preTitle: "Celebration Itinerary",
         title: "Ceremony & Venue Details",
-        subtitle: "Please join us for an evening of sacred rituals, royal music, feasts, and unending laughter",
+        subtitle: "Please join us for an auspicious afternoon of sacred rituals, royal music, feasts, and unending laughter",
         dateCard: {
           heading: "The Date",
           display: "Monday, November 30, 2026",
@@ -382,9 +382,9 @@ var INVITATION_CONFIG = {
         },
         timeCard: {
           heading: "The Time",
-          display: "06:30 PM Onwards",
-          muhurat: "Auspicious Ring Ceremony: 07:45 PM",
-          badge: "Evening Soirée"
+          display: "12:30 PM Onwards",
+          muhurat: "Auspicious Ring Ceremony: 12:30 PM",
+          badge: "Afternoon Celebration"
         },
         venueCard: {
           heading: "The Venue",
@@ -404,18 +404,18 @@ var INVITATION_CONFIG = {
       footer: {
         closingText: "Your presence will make our celebration even more special. We look forward to celebrating this beautiful beginning with you!",
         signatureWithLove: "With Love ❤️",
-        families: "The Bandgar & Gadade Families",
+        families: "The Gadade & Bandgar Families",
         rsvpHeading: "Kindly Favor Us with Your Response",
         rsvpSubtext: "Please let us know if you can grace the occasion with your presence",
         whatsappBtn: "RSVP on WhatsApp",
         saveCalBtn: "Save to Calendar",
         footnoteShloka: "॥ Sarvamangala Mangalye Shive Sarvartha Sadhike ॥",
-        copyright: "Crafted with love & blessings for Santosh & Rutuja",
+        copyright: "Crafted with love & blessings for Rutuja & Santosh",
         rsvpContacts: [
-          { name: "Bandgar Family", phone: "" },
-          { name: "Gadade Family", phone: "+91 9763700631" }
+          { name: "Gadade Family", phone: "+91 9763700631" },
+          { name: "Bandgar Family", phone: "" }
         ],
-        whatsappMessage: "Namaste! We would love to attend the Engagement Ceremony of Santosh and Rutuja."
+        whatsappMessage: "Namaste! We would love to attend the Engagement Ceremony of Rutuja and Santosh."
       },
 
       toasts: {

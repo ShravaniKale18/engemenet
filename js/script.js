@@ -20,7 +20,7 @@ function openInvitationWebsite(e) {
     ws.style.display = "none";
     try {
       if (ws.parentNode) ws.parentNode.removeChild(ws);
-    } catch (err) {}
+    } catch (err) { }
   }
   document.querySelectorAll(".reveal-fade").forEach(el => {
     el.classList.add("revealed");
@@ -31,12 +31,12 @@ function openInvitationWebsite(e) {
   }
   try {
     if (typeof playWeddingMusic === "function") playWeddingMusic();
-  } catch (err) {}
+  } catch (err) { }
   try {
     if (typeof window.triggerPetalCelebration === "function") {
       window.triggerPetalCelebration();
     }
-  } catch (err) {}
+  } catch (err) { }
 }
 
 if (typeof window !== "undefined") {
@@ -121,7 +121,7 @@ function switchLanguage(lang) {
   currentLang = lang;
   try {
     localStorage.setItem("invitation_lang", lang);
-  } catch (e) {}
+  } catch (e) { }
 
   const d = INVITATION_CONFIG.languages[lang];
   document.documentElement.lang = d.langCode;
@@ -359,7 +359,7 @@ function setImgSrc(id, src, fallback) {
   if (!el) return;
   if (src) el.src = src;
   if (fallback) {
-    el.onerror = function() {
+    el.onerror = function () {
       this.onerror = null;
       this.src = fallback;
     };
@@ -566,7 +566,7 @@ function initPetalAndSparkleCanvas() {
   for (let i = 0; i < maxPetals; i++) petals.push(new Petal());
   for (let i = 0; i < maxSparkles; i++) sparkles.push(new Sparkle());
 
-  window.triggerPetalCelebration = function() {
+  window.triggerPetalCelebration = function () {
     for (let i = 0; i < 35; i++) petals.push(new Petal(true));
     setTimeout(() => {
       while (petals.length > maxPetals) petals.pop();
@@ -599,36 +599,53 @@ function initAudioPlayer() {
   audioInstance = document.getElementById("wedding-audio");
   const musicToggleBtn = document.getElementById("music-toggle-btn");
 
-  if (!musicToggleBtn || !audioInstance) return;
+  if (!audioInstance) return;
 
   if (INVITATION_CONFIG.music && INVITATION_CONFIG.music.audioSrc) {
-    audioInstance.src = INVITATION_CONFIG.music.audioSrc;
+    if (!audioInstance.src || !audioInstance.src.includes(INVITATION_CONFIG.music.audioSrc)) {
+      audioInstance.src = INVITATION_CONFIG.music.audioSrc;
+    }
   }
 
-  musicToggleBtn.addEventListener("click", () => {
-    if (audioPlaying) {
-      pauseWeddingMusic();
-    } else {
-      playWeddingMusic();
-    }
-  });
+  if (musicToggleBtn) {
+    musicToggleBtn.addEventListener("click", () => {
+      if (audioPlaying) {
+        pauseWeddingMusic();
+      } else {
+        playWeddingMusic();
+      }
+    });
+  }
 }
 
 function playWeddingMusic() {
   const musicToggleBtn = document.getElementById("music-toggle-btn");
+  if (!audioInstance) {
+    audioInstance = document.getElementById("wedding-audio");
+  }
   if (!audioInstance) return;
 
-  audioInstance.play()
-    .then(() => {
+  const playPromise = audioInstance.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
       audioPlaying = true;
       if (musicToggleBtn) musicToggleBtn.classList.add("playing");
-    })
-    .catch(err => {
-      console.warn("Autoplay audio fallback:", err);
-      playIndianChimeDrone();
-      audioPlaying = true;
-      if (musicToggleBtn) musicToggleBtn.classList.add("playing");
+    }).catch(err => {
+      console.warn("Autoplay audio waiting for interaction:", err);
+      const startOnTouch = () => {
+        if (audioInstance) {
+          audioInstance.play().then(() => {
+            audioPlaying = true;
+            if (musicToggleBtn) musicToggleBtn.classList.add("playing");
+          }).catch(() => { });
+        }
+        document.removeEventListener("click", startOnTouch);
+        document.removeEventListener("touchstart", startOnTouch);
+      };
+      document.addEventListener("click", startOnTouch, { once: true });
+      document.addEventListener("touchstart", startOnTouch, { once: true });
     });
+  }
 }
 
 function pauseWeddingMusic() {
@@ -702,7 +719,7 @@ function initScrollAnimations() {
 
 /**
  * 7. Action Buttons (Calendar, Copy Address, Share, Scroll-Top)
- */
+ */.02
 function initActionButtons() {
   const addCalBtn = document.getElementById("add-calendar-btn");
   const addCalBottomBtn = document.getElementById("add-cal-bottom-btn");
@@ -713,13 +730,13 @@ function initActionButtons() {
   function openGoogleCalendar() {
     const d = getCurrentLangData();
     const title = encodeURIComponent(
-      d ? `${d.couple.groom.name} & ${d.couple.bride.name} - Engagement Ceremony` : "Santosh & Rutuja - Engagement Ceremony"
+      d ? `${d.couple.bride.name} & ${d.couple.groom.name} - Engagement Ceremony` : "Rutuja & Santosh - Engagement Ceremony"
     );
     const details = encodeURIComponent(
-      d ? d.cardHeader.announcement : "Auspicious Engagement Ceremony of Santosh and Rutuja"
+      d ? d.cardHeader.announcement : "Auspicious Engagement Ceremony of Rutuja and Santosh"
     );
     const location = encodeURIComponent("Vishnudas Mangal Karyalay, Navin Renapur Naka, Latur, Maharashtra");
-    const dates = "20261130T130000Z/20261130T173000Z";
+    const dates = "20261130T070000Z/20261130T110000Z";
 
     const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
     window.open(calUrl, "_blank", "noopener,noreferrer");
@@ -755,7 +772,7 @@ function initActionButtons() {
       };
 
       if (navigator.share) {
-        navigator.share(shareData).catch(() => {});
+        navigator.share(shareData).catch(() => { });
       } else if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(window.location.href).then(() => {
           showToast(d ? d.toasts.copiedLink : "Invitation link copied!");
@@ -867,7 +884,7 @@ function saveCustomBlessing(item) {
   list.unshift(item);
   try {
     localStorage.setItem(key, JSON.stringify(list));
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function refreshBlessingsFeed() {
